@@ -56,7 +56,7 @@ SMS Powered Chat with Twilio’s
 
 # Code Challenge:
 
-![alt text](https://raw.githubusercontent.com/impekable/react-chat-challenge/branch/demo-chat-app.png)
+![alt text](https://raw.githubusercontent.com/impekable/react-chat-challenge/master/demo-chat-app.png)
 
 Create a SMS powered chat the uses a similar design to the above screenshot (names can be replaced with phone numbers). The interface should be web based. It should allow to send and receive messages. A message history should be persisted into Twilio Sync. Inbound messages should update the UI in real-time using Twilio Sync Watchers.
 
