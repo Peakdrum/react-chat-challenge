@@ -20,12 +20,6 @@ class Header extends Component {
 
     return (
       <div className={headerStyles.main}>
-        <h1 >
-          {greeting}
-        </h1>
-        <h3>
-          {subGreeting}
-        </h3>
       </div>
     );
   }

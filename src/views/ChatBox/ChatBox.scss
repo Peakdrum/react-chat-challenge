@@ -1,0 +1,46 @@
+@import '../../styles/colors.scss';
+
+.chatbox {
+    background: $chatboxBg;
+    height: 100%;
+    padding: 15px 20px ;
+    margin:0;
+}
+
+.header { 
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.subheader {
+    font-size: 10px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.chatbody {
+    margin: 20px 0 ;
+}
+
+.sendbutton {
+    color: $chatboxBlue !important;
+}
+
+.input{
+    background:white;
+    border: none !important;
+    border-bottom: none;
+    border-radius:  5px;
+    padding:5px;
+    width:80%;
+
+}
+
+.input::before{
+    border: none  !important;
+}
+
+.input::after{
+    border: none !important;
+}
