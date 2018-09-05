@@ -52,3 +52,30 @@
     flex-flow:column nowrap;
     align-items: flex-end;
 }
+
+.messagereceiver, .messagesender {
+    margin: 20px;
+    padding:20px;
+    border-radius:10px;
+    max-width: 400px;
+    width:100%;
+}
+
+.messagereceiver {
+    background-color: $chatboxGreen;
+}
+
+.messagesender {
+    background-color: $chatboxBlue;
+    text-align:right;
+}
+
+.senderwrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.receiverwrapper {
+    display: flex;
+    justify-content: flex-start;
+}

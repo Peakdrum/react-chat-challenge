@@ -1,7 +1,8 @@
 const defaults = {
   example: 'Example default state',
   fetchChatPending: false,
-  chats: {}
+  chats: {},
+  displayKey: ''
 };
 
 export default function appReducer(state = defaults, action) {
@@ -22,7 +23,13 @@ export default function appReducer(state = defaults, action) {
     case 'SET_CHAT_SUCCESS':
       return {
         ...state,
-        chats: action.chats
+        chats: action.chats,
+        displayKey: Object.keys(action.chats)[0]
+      }
+    case 'SET_CHAT_BOX':
+      return {
+        ...state,
+        displayKey: action.displayKey 
       }
     case 'SET_CHAT_ERROR':
     default:

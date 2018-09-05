@@ -1,5 +1,5 @@
 import store from '../store';
-import firebase from '../../firebase'
+import firebase from '../../firebase';
 const { dispatch } =store;
 
 export function placeholder() {
@@ -22,14 +22,21 @@ export function fetchChats() {
       .catch( err => dispatch(fetchChatsError(err)))
 }
 
-export function fetchChatsPending() {
+function fetchChatsPending() {
   return dispatch({type:'SET_CHAT_PENDING'})
 }
 
-export function receiveChats(chats) {
+function receiveChats(chats) {
   return dispatch({type:'SET_CHAT_SUCCESS', chats})
 }
 
-export function fetchChatsError() {
-  return dispatch({type:'SET_CHAT_ERROR'})
+function fetchChatsError(err) {
+  return dispatch({type:'SET_CHAT_ERROR', payload: err})
+}
+
+export function setChatBox(displayKey) {
+  return dispatch({
+    type:'SET_CHAT_BOX',
+    displayKey
+  })
 }
