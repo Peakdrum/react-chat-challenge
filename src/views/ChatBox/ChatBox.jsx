@@ -24,11 +24,7 @@ const ChatBody = props => <Grid item className={chatboxStyles.chatbody}>
     <p>chatbody</p>
 </Grid>
 
-const ChatInput = props => <Grid container>
-    <Grid xs={12} item>
+const ChatInput = props => <div className={chatboxStyles.inputwrapper}>
         <Input className={chatboxStyles.input} rows="3" multiline />
-    </Grid>
-    <Grid xs={12} item>
         <Button className={chatboxStyles.sendbutton}>Send</Button>
-    </Grid>
-</Grid>
+</div>

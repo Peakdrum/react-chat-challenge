@@ -23,6 +23,7 @@
   "homepage": "http://gitlab.impekable.cloud/impekable/reactjs",
   "dependencies": {
     "@material-ui/core": "^3.0.1",
+    "cross-fetch": "^2.2.2",
     "firebase": "^5.4.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

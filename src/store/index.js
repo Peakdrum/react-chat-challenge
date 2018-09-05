@@ -1,4 +1,4 @@
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, createStore, compose } from 'redux';
 import { enableBatching } from 'redux-batched-actions';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
@@ -11,7 +11,9 @@ if (process.env.NODE_ENV !== 'production') {
   middleware.push(createLogger());
 }
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 export default createStore(
   enableBatching(reducer),
-  applyMiddleware(...middleware)
+  composeEnhancers(applyMiddleware(...middleware))
 );

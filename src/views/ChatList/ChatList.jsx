@@ -6,25 +6,7 @@ import firebase from '../../../firebase';
 
 class ChatList extends Component{
 
-  state = {
-    chat: []
-  }
-
-  componentDidMount = () => {
-    this.getChats()
-  }
-
-  getChats = () => {
-    firebase
-      .database()
-      .ref('chat')
-      .once('value')
-      .then( snap => this.setState({chat:snap.val()}))
-      .catch( e=> console.log('error'))
-  }
-
   render(){
-    console.log('this.state', this.state)
     return(
       <div className={chatListStyles.chatbox}>
           <SearchBox/>

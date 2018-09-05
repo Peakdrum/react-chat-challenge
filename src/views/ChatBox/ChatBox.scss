@@ -20,7 +20,6 @@
 }
 
 .chatbody {
-    margin: 20px 0 ;
 }
 
 .sendbutton {
@@ -33,7 +32,7 @@
     border-bottom: none;
     border-radius:  5px;
     padding:5px;
-    width:80%;
+    width:100%;
 
 }
 
@@ -43,4 +42,13 @@
 
 .input::after{
     border: none !important;
+}
+
+.inputwrapper {
+    border-top: white 2px solid;
+    padding-top: 20px;
+    margin: 20px;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items: flex-end;
 }
