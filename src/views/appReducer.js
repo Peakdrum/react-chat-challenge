@@ -31,6 +31,17 @@ export default function appReducer(state = defaults, action) {
         ...state,
         displayKey: action.displayKey 
       }
+    case 'UPDATE_CHAT':
+      return {
+        ...state,
+        chats:{
+          ...state.chats,
+          [action.payload.chatId]:{
+            ...state.chats[action.payload.chatId],
+            chatHistory: action.payload.chat
+          }
+        }
+      }
     case 'SET_CHAT_ERROR':
     default:
       return state;

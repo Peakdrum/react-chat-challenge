@@ -18,6 +18,7 @@ const config = {
     path: BUILD_DIR,
     filename: '[name].[hash].js'
   },
+  
   plugins: [
     new CleanWebpackPlugin([BUILD_DIR]),
     new webpack.DefinePlugin({
@@ -42,6 +43,12 @@ const config = {
       { from: STATIC_DIR, BUILD_DIR }
     ])
   ],
+  node: {
+    net: 'empty',
+    tls: 'empty',
+    dns: 'empty',
+    fs: 'empty'
+  },
   module: {
     rules: [
       {
@@ -65,7 +72,8 @@ const config = {
   },
   devServer: {
     contentBase: BUILD_DIR,
-    port: DEV_PORT
+    port: DEV_PORT,
+    proxy: { '/api/**': { target: 'http://localhost:8000/', pathRewrite: { '^/api': '' }, secure: false, logLevel: 'debug' } }
   },
   resolve: {
     extensions: [ '.js', '.jsx' ],

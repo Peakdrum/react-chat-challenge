@@ -7,7 +7,7 @@ import Header from './Header/Header';
 import Body from './Body/Body';
 import ChatList from './ChatList/ChatList';
 import ChatBox from './ChatBox/ChatBox';
-import { fetchChats, setChatBox} from './appActions'
+import { fetchChats, setChatBox, sendTextMessage} from './appActions'
 
 class App extends Component{
 
@@ -23,7 +23,7 @@ class App extends Component{
             <ChatList {...this.props} setChatBox={setChatBox}/>
           </Grid>
           <Grid className={appStyles.griditem} item xs>
-            <ChatBox {...this.props}/>
+            <ChatBox {...this.props} sendTextMessage={sendTextMessage}/>
           </Grid>
         </Grid>
       </Body>
