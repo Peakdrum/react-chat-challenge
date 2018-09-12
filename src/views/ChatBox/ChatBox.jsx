@@ -38,8 +38,8 @@ const ChatBody = props => {
         {
             props.chat && props.chat.chatHistory.map( 
                 (chatSeq, key) => chatSeq.sender === props.chat.name ? 
-                    <MessageBoxAsSender key={'sender'+key} context={chatSeq.context}/>:
-                    <MessageBoxAsReceiver key={'receiver'+key} context={chatSeq.context}/>
+                    <MessageBoxAsReceiver key={'receiver'+key} context={chatSeq.context}/>:
+                    <MessageBoxAsSender key={'sender'+key} context={chatSeq.context}/>
              )
         }
     </Grid>

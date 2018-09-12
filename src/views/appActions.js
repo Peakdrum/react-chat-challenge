@@ -65,15 +65,15 @@ export function setChatBox(displayKey) {
 
 export function sendTextMessage(chatId, phoneNumber, text){
   saveChat(chatId, text)
-  // axios.post('/api/sendMessage/+15867881607/'+'+66944349911'+'/'+text)
-  // .then(function (response) {
-  //   if(response.status === 200){
-  //     saveChat()
-  //   }
-  // })
-  // .catch(function (error) {
-  //   console.log(error);
-  // });
+  axios.post('/api/sendMessage/+15867881607/'+phoneNumber+'/'+text)
+  .then(function (response) {
+    if(response.status === 200){
+      saveChat()
+    }
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 }
 
 export function saveChat(chatId, text){
